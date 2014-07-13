@@ -21,8 +21,9 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('html', ['styles', 'scripts'], function () {
-    var jsFilter = $.filter('**/*.js');
-    var cssFilter = $.filter('**/*.css');
+    var jsFilter = $.filter('**/*.js'),
+        cssFilter = $.filter('**/*.css'),
+        htmlFilter = $.filter('**/*.html');
 
     return gulp.src('app/*.html')
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
@@ -34,6 +35,9 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
+        .pipe(htmlFilter)
+        .pipe($.minifyHtml())
+        .pipe(htmlFilter.restore())
         .pipe(gulp.dest('dist'))
         .pipe($.size());
 });
