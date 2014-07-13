@@ -1,0 +1,17 @@
+@media print {
+    .store-link {
+        display: none;
+    }
+
+    header {
+        position: static;
+    }
+
+    [id=content] {
+        margin-top: 0;
+    }
+
+    nav, [id=profiles], [id=menu-button], .store-link, .web-link {
+        display: none !important;
+    }
+}

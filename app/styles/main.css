@@ -1,0 +1,289 @@
+/* COLOR PALETTE: Indigo */
+/* Main blue: #3F51B5 */
+/* Lighter blue: #7986cb */
+
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mobile first */
+/* Common */
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAFAFA;
+}
+
+section {
+    padding: 16px;
+    margin: 16px;
+    overflow: hidden;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+section:nth-child(n+2) {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
+    background-color: white;
+}
+
+h1 {
+    padding-bottom: 8px;
+    color: #3F51B5;
+}
+
+p {
+    margin: 0;
+}
+
+small {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 0.8rem;
+}
+
+[id=content] {
+    margin-top: 4rem;
+}
+
+/* Fix for anchors being obscured by fixed positionned header */
+.anchor {
+    padding-top: 6rem;
+    margin-top: -6rem;
+}
+
+article {
+    margin-bottom: 16px;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+tr:nth-child(even) {
+    background-color: #E8EAF6;
+}
+
+td {
+    padding: 8px;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+a.store-link, a.web-link, .store-link > img {
+    display: inline-block;
+    vertical-align: top;
+    height: 40px;
+    width: auto;
+}
+
+a.web-link {
+    padding: 8px;
+
+    background: #000000;
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.description {
+    padding: 8px;
+}
+
+small.timeline + small.location:before {
+    content: ' | ';
+}
+
+.article-section {
+    margin: 16px 0;
+}
+
+.techno-item {
+    padding: 4px;
+    color: #ffffff;
+    background-color: #7986cb;
+    display: inline-block;
+}
+
+/* Header */
+header {
+    -webkit-transform: translateZ(0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+
+    margin: 0;
+    min-height: 4rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    background-color: #3F51B5;
+    color: white;
+}
+
+.header-item {
+    display: table-cell;
+    vertical-align: middle;
+    height: 4rem;
+    padding: 16px;
+    font-size: 1.5rem;
+}
+
+nav > a {
+    display: block;
+    padding: 8px;
+}
+
+nav > a:hover, nav > a:active {
+    background: #7986cb;
+}
+
+nav {
+    /* Something higher than I actually need */
+    max-height: 200px;
+    overflow: hidden;
+
+    transition: max-height 0.2s;
+}
+
+nav.hide-nav {
+    max-height: 0;
+}
+
+.name {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+
+    background-color: #3F51B5;
+}
+
+[id=menu-button] {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    cursor: pointer;
+}
+
+[id=menu-button]:hover, [id=menu-button]:active {
+    background-color: #7986cb;
+}
+
+/* Profiles */
+[id=profiles] {
+    text-align: center;
+    padding: 0;
+}
+
+[id=profiles] .profile-link {
+    display: inline-block;
+    background-color: #3F51B5;
+    color: #ffffff;
+    font-size: 4rem;
+    padding: 1rem;
+    margin: 16px;
+}
+
+[id=profiles] .profile-link:hover, .profile-link:active {
+    background-color: #7986cb;
+}
+
+
+/* No javascript compatibility */
+.no-js header {
+    position: static;
+}
+
+.no-js [id=content] {
+    margin-top: 0;
+}
+
+.no-js [id=menu-button] {
+    display: none;
+}
+
+.no-js nav.hide-nav {
+    max-height: none;
+}
+
+.no-js .anchor {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.no-js .icon-envelope {
+    display: none;
+}
+
+
+/* Desktop & tablet specific */
+@media only screen and (min-width: 768px) {
+    /* Common */
+    section {
+        width: 800px;
+        margin: 16px auto;
+    }
+
+    [id=content] {
+        margin-top: 6rem;
+    }
+
+    /* Header */
+    header {
+        height: 6rem;
+    }
+
+    .header-item {
+        height: 6rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    nav, nav.hide-nav {
+        display: table; /* Fixes responsive bug on safari */
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 16px;
+        height: 6rem;
+    }
+
+    nav > a {
+        display: table-cell;
+        vertical-align: middle;
+        height: 6rem;
+    }
+
+    nav > a:hover, nav > a:active {
+        border-bottom: 4px solid #3F51B5;
+    }
+
+    .section-link {
+        padding-right: 8px;
+        font-size: 1.2rem;
+    }
+
+    [id=menu-button] {
+        display: none;
+    }
+}
+
