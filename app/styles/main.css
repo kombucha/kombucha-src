@@ -116,6 +116,7 @@ small.timeline + small.location:before {
 
 .techno-item {
     padding: 4px;
+    margin-bottom: 4px;
     color: #ffffff;
     background-color: #7986cb;
     display: inline-block;
@@ -203,7 +204,6 @@ nav.hide-nav {
     background-color: #7986cb;
 }
 
-
 /* No javascript compatibility */
 .no-js header {
     position: static;
@@ -229,7 +229,6 @@ nav.hide-nav {
 .no-js .icon-envelope {
     display: none;
 }
-
 
 /* Desktop & tablet specific */
 @media only screen and (min-width: 768px) {
