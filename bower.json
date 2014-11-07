@@ -2,7 +2,8 @@
   "name": "resume",
   "private": true,
   "dependencies": {
-    "normalize.css": "~3.0.1"
+    "normalize.css": "~3.0.1",
+    "cheet.js": "~0.3.2"
   },
   "devDependencies": {}
 }

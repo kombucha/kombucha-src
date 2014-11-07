@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(function (window) {
     // Disable no javascript mode
     document.documentElement.classList.remove('no-js');
 
@@ -39,4 +39,9 @@
 
     // Add my email
     mailLink.href = concat('ma', 'ilto', ':', '%76%69%6E%63%65%6E%74.', 'leme', 'unier', '+pro\u0040', '%67%6D%61%69%6C\u002ecom');
-})();
+
+	// Add cheat
+	window.cheet('up up down down left right left right b a', function () {
+		window.location.href = 'https://www.youtube.com/v/NWD7iqtOJSE&autoplay=1';
+	});
+}) (window);
